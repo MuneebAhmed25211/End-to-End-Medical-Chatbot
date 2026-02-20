@@ -1,0 +1,11 @@
+langchain
+langchain-groq
+langchain-community
+langchain-core
+langchain-pinecone
+sentence-transformers
+pinecone
+chromadb
+flask
+python-dotenv
+PyPDF2
