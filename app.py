@@ -63,10 +63,15 @@ def index():
 def chat():
     msg = request.form["msg"]
     print("User Input:", msg)
-    result = qa_chain.invoke(msg)  # plain string, not dict
+    
+    # Handle greetings separately
+    greetings = ["hello", "hi", "hey", "how are you", "good morning", "good evening"]
+    if msg.lower().strip() in greetings:
+        return "Hello! I'm your Medical Assistant. Ask me any medical questions and I'll help you!"
+    
+    result = qa_chain.invoke(msg)
     print("Response:", result)
     return str(result)
-
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080, debug=True)
