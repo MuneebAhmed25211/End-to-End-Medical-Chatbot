@@ -9,5 +9,5 @@ chromadb
 flask
 python-dotenv
 PyPDF2
-
+python-dotenv
 -e .
