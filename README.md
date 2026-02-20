@@ -12,3 +12,6 @@ conda activate medical-chatbot
 ```bash
 pip install -r requirements.txt
 ```
+```initialization
+PINECONE_API_KEY = "XXXXXXXXXXXXXXXXXXXXXXX"
+```
