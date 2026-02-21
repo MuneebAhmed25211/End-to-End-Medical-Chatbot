@@ -26,7 +26,7 @@ def text_split(extracted_data):
 #download embedding model
 def download_hugging_face_embedding():
     embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/paraphrase-MiniLM-L6-v2",  # also valid
+        model_name="sentence-transformers/paraphrase-MiniLM-L3-v2"
         model_kwargs={'device': 'cpu'}
     )
     return embeddings
