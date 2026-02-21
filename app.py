@@ -12,7 +12,7 @@ import os
 
 app = Flask(__name__)
 
-load_dotenv(r"C:\Users\munee\anaconda_projects\16b75561-9a0c-4493-bef9-1a4554799fd9\End-to-End-Medical-Chatbot\.env")
+load_dotenv()
 PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 
