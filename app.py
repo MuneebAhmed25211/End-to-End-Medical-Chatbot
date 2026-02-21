@@ -9,7 +9,13 @@ from pinecone import Pinecone
 from dotenv import load_dotenv
 from src.prompt import *
 import os
+import logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
+logger.debug("Starting app...")
+logger.debug(f"PINECONE_API_KEY present: {'PINECONE_API_KEY' in os.environ}")
+logger.debug(f"GROQ_API_KEY present: {'GROQ_API_KEY' in os.environ}")
 app = Flask(__name__)
 
 load_dotenv()
