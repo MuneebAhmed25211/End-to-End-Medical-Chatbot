@@ -1,5 +1,16 @@
 from flask import Flask, render_template, jsonify, request
 from src.helper import download_hugging_face_embedding
+import logging
+import os
+from dotenv import load_dotenv
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+logger.debug("Starting app.py")
+logger.debug(f"Current working dir: {os.getcwd()}")
+logger.debug(f"Files in current dir: {os.listdir('.')}")
+logger.debug(f"PINECONE_API_KEY present: {'PINECONE_API_KEY' in os.environ}")
+logger.debug(f"GROQ_API_KEY present: {'GROQ_API_KEY' in os.environ}")
 from langchain_pinecone import PineconeVectorStore
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -8,15 +19,7 @@ from langchain_groq import ChatGroq
 from pinecone import Pinecone
 from dotenv import load_dotenv
 from src.prompt import *
-import os
-import logging
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
 
-logger.debug("Starting app...")
-logger.debug(f"PINECONE_API_KEY present: {'PINECONE_API_KEY' in os.environ}")
-logger.debug(f"GROQ_API_KEY present: {'GROQ_API_KEY' in os.environ}")
-app = Flask(__name__)
 
 load_dotenv()
 PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
