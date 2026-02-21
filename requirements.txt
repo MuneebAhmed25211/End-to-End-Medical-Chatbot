@@ -11,4 +11,4 @@ python-dotenv
 PyPDF2
 python-dotenv
 pyyaml==6.0.1
--e .
+
