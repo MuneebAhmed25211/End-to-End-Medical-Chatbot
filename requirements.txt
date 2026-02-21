@@ -1,4 +1,4 @@
-# LangChain family - aligned to compatible versions (langchain-core >=0.3)
+# LangChain family - aligned to 0.3 series (compatible with langchain-pinecone 0.2.0)
 langchain==0.3.3
 langchain-core==0.3.2
 langchain-community==0.3.2
@@ -6,13 +6,13 @@ langchain-text-splitters==0.3.0
 langchain-groq==0.2.0
 langchain-pinecone==0.2.0
 
-# Pinecone core
+# Pinecone core client
 pinecone-client==5.0.1
 
-# Embeddings
+# Embeddings model
 sentence-transformers==3.1.1
 
-# Flask + server
+# Flask + production server
 flask==3.0.3
 gunicorn==22.0.0
 
@@ -20,7 +20,7 @@ gunicorn==22.0.0
 python-dotenv==1.0.1
 PyPDF2==3.0.1
 
-# Stable deps to avoid build/compilation issues
+# Stable dependencies to avoid build/compilation issues
 pydantic==2.9.2
 pydantic-core==2.23.4
 pyyaml==6.0.1
