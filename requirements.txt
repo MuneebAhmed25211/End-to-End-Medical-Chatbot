@@ -1,24 +1,14 @@
-# Core LangChain (pinned to avoid resolution-too-deep)
 langchain==0.2.16
 langchain-core==0.2.38
 langchain-community==0.2.16
 langchain-groq==0.1.9
-
-# Pinecone (correct package name)
+langchain-pinecone==0.2.0   # <-- ADD THIS LINE
 pinecone-client==5.0.1
-
-# Embeddings
 sentence-transformers==3.1.1
-
-# Flask + Server
 flask==3.0.3
 gunicorn==22.0.0
-
-# Utilities
 python-dotenv==1.0.1
 PyPDF2==3.0.1
-
-# Force stable deps (prevents build/compilation issues)
 pydantic==2.8.2
 pydantic-core==2.20.1
 pyyaml==6.0.1
