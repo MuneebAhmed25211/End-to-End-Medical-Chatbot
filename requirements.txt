@@ -1,6 +1,6 @@
-# LangChain family - aligned to 0.3 series (compatible with langchain-pinecone 0.2.0)
+# LangChain family - aligned to 0.3.3 series (all compatible)
 langchain==0.3.3
-langchain-core==0.3.2
+langchain-core==0.3.10          # >=0.3.10 required by langchain 0.3.3
 langchain-community==0.3.2
 langchain-text-splitters==0.3.0
 langchain-groq==0.2.0
